@@ -38,7 +38,4 @@ public class UsersController {
         DisplayUserDto displayUserDto = userService.getUser(id);
         return ResponseEntity.ok(displayUserDto);
     }
-
-
-
 }
