@@ -3,6 +3,7 @@ package com.anand.userservice.users;
 
 import com.anand.userservice.users.dto.CreateUserDto;
 import com.anand.userservice.users.dto.DisplayUserDto;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +11,8 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/users")
+    @RequestMapping("/api/v1/users")
+@Profile("!dev")
 public class UsersController {
 
     UserService userService;
