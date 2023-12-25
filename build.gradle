@@ -1,7 +1,7 @@
 plugins {
 	id 'war'
 	id 'java'
-	id 'org.springframework.boot' version '3.0.2'
+	id 'org.springframework.boot' version '2.7.0'
 	id 'io.spring.dependency-management' version '1.1.0'
 }
 
@@ -33,6 +33,10 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	implementation 'me.paulschwarz:spring-dotenv:3.0.0'
 	implementation 'org.modelmapper:modelmapper:3.0.0'
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+	implementation 'io.springfox:springfox-swagger-ui:3.0.0'
+
 }
 
 tasks.named('test') {
