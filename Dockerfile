@@ -4,6 +4,8 @@ RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
 
 COPY ./*.war /usr/local/tomcat/webapps/
 
-EXPOSE 8080
-#RUN catalina.sh run
-CMD ["/bin/sh", "-c",  "catalina.sh run && java -jar -Dspring.profiles.active=dev userService-0.0.1-SNAPSHOT.war"]
+WORKDIR  /usr/local/tomcat/
+
+RUN chmod +x *
+EXPOSE 8080-8090
+CMD ["/bin/bash", "-c",  "java -jar -Dspring.profiles.active=dev /usr/local/tomcat/webapps/userService-0.0.1-SNAPSHOT.war"]
