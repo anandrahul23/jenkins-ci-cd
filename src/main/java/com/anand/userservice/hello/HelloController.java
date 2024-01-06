@@ -10,12 +10,12 @@ public class HelloController {
     @GetMapping("")
     public String  hello()
     {
-        return "Hello from Rahul Anand root level, This confirms deployment is working";
+        return "Hello from Rahul Anand root level, This confirms deployment is working with ansible";
     }
 
     @GetMapping("hello")
     public String  welcomeFromHello()
     {
-        return "Hello from Rahul Anand,  get mapping hello,  This confirms deployment is working";
+        return "Hello from Rahul Anand,  get mapping hello,  This confirms deployment is working with ansible";
     }
 }
